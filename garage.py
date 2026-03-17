@@ -33,3 +33,16 @@ v2.modif_prix_litre(1.95)
 
 print(f"Après modification (Clio) : {v2.prix_litre} €")
 print(f"Après modification (Captur) : {v1.prix_litre} €")
+
+
+co2_clio = v2.calcul_co2(distance_trajet)
+print(f"Émission CO2 pour la Clio : {co2_clio:.2f} kg")
+
+co2_captur = v1.calcul_co2(distance_trajet)
+print(f"Émission CO2 pour le Captur : {co2_captur:.2f} kg")
+
+v2 = Voitures("Renault", "Clio_TCE_100ch", 2017, "17 000 €", "Bleu nuit", 5.5)
+print(v2)
+
+print("Appel de la méthode d'affichage des données protégées :")
+v2.affiche_prot_priv()
