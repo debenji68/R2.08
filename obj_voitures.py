@@ -2,6 +2,7 @@ import base64
 
 class Voitures():
     prix_litre = 1.70
+    vehicules = []
     # Constructeur avec 3 arguments...
     def __init__(self, marque, modele, annee, prix = None, couleur = "Blanc", conso = 6.0, id_serie="A123 B456 C789", audio_code="0000") :
         # Trois attributs d’instance...
@@ -13,6 +14,7 @@ class Voitures():
         self.conso = conso
         self._id_serie = id_serie
         self.__audio_code = base64.b64encode(audio_code.encode()).decode()
+        Voitures.vehicules.append(self)
 
 
     def __str__(self):
