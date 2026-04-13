@@ -20,7 +20,7 @@ class Auteur(Couleur):
 
     def __str__(self):
         # Retourne la f-string selon le format : ID. : Prenom NOM (né(e) le ... en ...)
-        return f"{self.id}. : {self.prenom} {self.nom} (né(e) le {self.date_naissance} en {self.pays})"
+        return f"{Auteur.MAGENTA}{self.id}. : {Auteur.NO_COLOR}{self.prenom} {self.nom}{Auteur.MAGENTA} (né(e) le {self.date_naissance} en {self.pays}){Auteur.NO_COLOR}"
 
 
 print("Création de 3 instances de Auteur et affichage...")
